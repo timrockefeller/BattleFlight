@@ -1,7 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using LitJson;
+using System.IO;
+using System.Text;
 
 namespace Caress
 {
@@ -9,13 +10,13 @@ namespace Caress
         public Map(string Path)
         {
             this.mapName = Path;
-            this.Points = this.parseMapByName(Path);
+            this.Points = parseMapByName(Path);
         }
         public string mapName;
         public List<Point> Points;
         public static List<Point> parseMapByName (string Path)
         {
-            return JsonMapper.ToObject<List<Point>>(new JsonReader(File.ReadAllText(path))); ;
+            return JsonUtility.FromJson<List<Point>>(File.ReadAllText(Path, Encoding.UTF8)); 
         }
         Point getPointById(int id) {
             foreach (Point x in Points)
