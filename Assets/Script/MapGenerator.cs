@@ -13,7 +13,7 @@ namespace Caress
         }
         public string mapName;
         public List<Point> Points;
-        public static List<Point> parseMapByName(string Path)
+        public static List<Point> parseMapByName (string Path)
         {
             return JsonMapper.ToObject<List<Point>>(new JsonReader(File.ReadAllText(path))); ;
         }
