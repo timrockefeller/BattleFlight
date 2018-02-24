@@ -5,10 +5,11 @@ namespace Caress
 {
     public class Environment : MonoBehaviour
     {
-        Map defaultMap;
+        public static Map defaultMap;
 
         public GameObject MapCanvas;
         public GameObject Perfab_Point;
+        
         
         void Awake()
         {
@@ -22,12 +23,9 @@ namespace Caress
             {
                 Vector3 position = new Vector3(x.x,0, x.y);
                 Quaternion rotation = new Quaternion(90,0,0,0);
-                Instantiate(Perfab_Point, position, rotation, MapCanvas.transform);
+                Instantiate(Perfab_Point, position, rotation);
             }
         }
-        void Update()
-        {
 
-        }
     }
 }

@@ -282,9 +282,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\Script\camaraCtrl.cs" />
-    <Compile Include="Assets\Script\Environment.cs" />
-    <Compile Include="Assets\Script\MapGenerator.cs" />
+    <Compile Include="Assets\Script\Component\camaraCtrl.cs" />
+    <Compile Include="Assets\Script\Component\Environment.cs" />
+    <Compile Include="Assets\Script\IngameLogic\Card.cs" />
+    <Compile Include="Assets\Script\IngameLogic\CardFunction\Card_Motivation.cs" />
+    <Compile Include="Assets\Script\IngameLogic\Chess.cs" />
+    <Compile Include="Assets\Script\IngameLogic\Function.cs" />
+    <Compile Include="Assets\Script\IngameLogic\Map.cs" />
+    <Compile Include="Assets\Script\IngameLogic\Player.cs" />
     <Compile Include="Assets\VOXFileLoader\Scripts\ObjFileExport.cs" />
     <Compile Include="Assets\VOXFileLoader\Scripts\VOXCruncher.cs" />
     <Compile Include="Assets\VOXFileLoader\Scripts\VOXFileImport.cs" />
