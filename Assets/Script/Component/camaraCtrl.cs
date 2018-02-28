@@ -17,6 +17,18 @@ public class camaraCtrl : MonoBehaviour
     }
     
     void Update() {
+		//Zoom out
+		if (Input.GetAxis("Mouse ScrollWheel") < 0)
+		{
+			if(Camera.main.fieldOfView <= 100)
+				Camera.main.fieldOfView += 2;
+		}
+		//Zoom in
+		if (Input.GetAxis("Mouse ScrollWheel") > 0)
+		{
+			if(Camera.main.fieldOfView > 40)
+				Camera.main.fieldOfView -= 2;
+		}
         if ( ! Input.GetMouseButton(0))
         {
             //Debug.Log(Input.mousePosition);
